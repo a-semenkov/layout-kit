@@ -4,7 +4,7 @@ export function animateFadeIn(element, handler) {
   element.style.display = 'block';
 
   requestAnimationFrame(() => {
-    element.setAttribute('data-shown', '');
+    element.setAttribute('data-shown', 'true');
     handler();
   });
 }
@@ -19,6 +19,7 @@ export function animateFadeOut(element, handler) {
   );
 
   function handleFadeOut() {
+    console.log('fade');
     element.style.display = 'none';
     transition();
     handler();

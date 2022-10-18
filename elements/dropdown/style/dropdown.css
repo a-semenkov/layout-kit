@@ -1,0 +1,47 @@
+.dropdown__wrapper {
+  position: relative;
+  width: 250px;
+}
+
+.dropdown__wrapper[data-shown='true'] .dropdown__menu,
+.dropdown__wrapper[data-shown='true'] .dropdown-overlay {
+  display: block;
+}
+
+.dropdown-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: black;
+  opacity: 0.7;
+}
+.hero__input {
+  width: 100%;
+}
+.dropdown__menu {
+  display: none;
+  position: relative;
+  width: 100%;
+
+  background-color: red;
+  z-index: 1;
+}
+
+.dropdown__option {
+  position: relative;
+}
+
+.dropdown__option::before {
+  position: absolute;
+  content: '';
+  display: block;
+
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
