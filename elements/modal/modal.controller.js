@@ -1,11 +1,13 @@
-import ModalView from './modal.view.js';
-import ModalModel from './modal.model.js';
+import ModalView from "./modal.view.js";
+import ModalModel from "./modal.model.js";
+
+// TODO: запретить создавать новые инстансы, если они уже существуют
 
 export default class Modal {
-  constructor(targetNode, options, content) {
+  constructor(content, targetNode = null, options) {
     this.view = new ModalView();
     this.model = new ModalModel();
-    this.element = targetNode;
+    // this.element = targetNode;
     this.handleModalCreate();
 
     this.defaultOptions = {
@@ -13,9 +15,9 @@ export default class Modal {
       onClose: () => {},
     };
     this.defaultContent = {
-      header: '',
-      body: '',
-      footer: '',
+      header: "",
+      body: "",
+      footer: "",
     };
 
     this.options = Object.assign(this.defaultOptions, options);

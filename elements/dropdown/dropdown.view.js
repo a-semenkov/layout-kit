@@ -55,7 +55,7 @@ export default class DropdownView {
     this.#itemList = [];
     list.forEach((item) => {
       const option = el(
-        `li.dropdown__option${list.selected === item.id ? 'selected' : ''}`,
+        `li.dropdown__option${item.selected ? 'selected' : ''}`,
 
         { 'data-id': item.id || item.value }
       );

@@ -3,8 +3,8 @@
 import Dropdown from './elements/dropdown/dropdown.controller.js';
 
 const hooks = {
-  onOpen: () => {
-    console.log('открыто');
+  onOpen: (e) => {
+    console.log(e);
   },
 };
 
@@ -56,4 +56,8 @@ btn.addEventListener('click', () => {
     { id: 10, value: 'бочка' },
   ];
   // console.log(drop.options);
+});
+
+document.addEventListener('click', (e) => {
+  console.log(e);
 });
